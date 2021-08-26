@@ -1,0 +1,46 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+#Q{
+	font-size: 30px;
+	font-weight: bold;
+	margin-left: 70px;
+	margin-top: 60px;
+	
+}
+#border{
+	border: 3px solid black;
+	width: 600px;
+	height: 400px;
+	margin-left: 330px;
+	margin-top: 90px;
+}
+
+#JP{
+	width: 200px;
+	height: 200px;
+	background-color: magenta;
+	border-radius: 40px;
+	line-height: 200px;
+	text-align: center;
+	font-size: 30px;
+	font-weight: bold;
+	margin-left: 190px;
+	margin-top: 40px;
+
+}
+#JP:hover{
+	opacity: 0.7;
+}
+
+#JP:active{
+	opacity: 0.5;
+}
+
+a{
+	text-decoration: none;
+	color: black;
+	display: block;
+}
