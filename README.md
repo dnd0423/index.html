@@ -1,1 +1,0 @@
-# kotowaza_ko
