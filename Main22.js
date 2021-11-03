@@ -96,7 +96,7 @@ function collisionDetection() {
 						
 			}
 			}
-				if(score ==(brickColumnCount * brickRowCount)) {
+				if(score >=(brickColumnCount * brickRowCount)) {
 					alert("게임이 끝났습니다. 이 창을 닫아 주세요!");
 					document.location.reload();
 			}	
