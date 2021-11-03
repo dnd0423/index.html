@@ -56,15 +56,55 @@ function collisionDetection() {
 			dy = -dy;
 			b.status = 0;
 			score++;
-				if(score == ((brickColumnCount * brickRowCount) + 20)){
-					alert("Clear!"+"점수는"+ score + "점 입니다");
+				const flag = Math.floor(Math.random() * 300);
+			if(flag <= 20){
+			let kotae2 = prompt(quiz[0].quesion);
+			
+			if(kotae2 == quiz[0].kotae){
+			score += 5;
+			life  += 1;  
+			}
+			}else if(flag <=40 && flag >20){
+			let kotae2 = prompt(quiz[1].quesion);
+	
+			if(kotae2 == quiz[1].kotae){
+				score += 5;
+				life  += 1;  
+			}
+			}else if(flag <=60 && flag >40){
+			let kotae2 = prompt(quiz[2].quesion);
+	
+			if(kotae2 == quiz[2].kotae){
+					score += 5;
+					life  += 1;  
+			}
+			}else if(flag <=80 && flag >60){
+			let kotae2 = prompt(quiz[3].quesion);
+	
+				if(kotae2 == quiz[3].kotae){
+						score += 5;
+						life  += 1;  
+			}
+			}else if(flag <=100 && flag >80){
+			let kotae2 = prompt(quiz[4].quesion);
+	
+				if(kotae2 == quiz[4].kotae){
+					score += 5;
+					life  += 1;  
+			}
+			}else if(flag >100){
+						
+			}
+			}
+				if(score ==(brickColumnCount * brickRowCount)) {
+					alert("게임이 끝났습니다. 이 창을 닫아 주세요!");
 					document.location.reload();
-		}
+			}	
 		}
 	}
 }
 }
-}
+
 function drawScore(){
 	ctx.font = "16px solid";
 	ctx.fillStyle = "black";
@@ -120,7 +160,7 @@ function draw() {
 	drawLife();
 	collisionDetection();
 
-	if(upPressed == true){
+	/*if(upPressed == true){
 	let kotae2 = prompt(quiz[i].quesion);
 	upPressed = false;
 	if(kotae2 == quiz[i].kotae){
@@ -131,7 +171,7 @@ function draw() {
 	if(i>4){
 		i = 0;
 	}
-}
+}*/
 
 	if(x + dx < ballRadius || x+ dx > canvas.width - ballRadius){
 		dx = -dx;
@@ -178,8 +218,8 @@ requestAnimationFrame(draw);
 }
 document.addEventListener("keydown", keyDownHandler1, false);
 document.addEventListener("keyup", keyUpHandler1, false);
-document.addEventListener("keydown",keyDownHandler2, false);
-document.addEventListener("keyup",keyUpHandler2, false);
+//document.addEventListener("keydown",keyDownHandler2, false);
+//document.addEventListener("keyup",keyUpHandler2, false);
 
 function keyDownHandler1(e) {
 	if(e.keyCode == 39){
@@ -195,7 +235,7 @@ function keyUpHandler1(e) {
 	}else if(e.keyCode == 37){
 		leftPressed = false;
 	}
-}
+}/*
 function keyDownHandler2(e) {
 	if(e.keyCode == 38){
 		upPressed = true;
@@ -206,7 +246,7 @@ function keyUpHandler2(e) {
 	if(e.keyCode == 38){
 		upPressed = false;
 	}
-}
+}*/
 
 //draw(); //자동 실행
 
